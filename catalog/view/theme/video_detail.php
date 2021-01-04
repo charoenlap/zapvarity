@@ -6,13 +6,12 @@
             </div>
         </div>
     </div>
-    
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 mb-2 pl-1 pr-1">
-                <?php if(!empty($content['link'])){ ?>
+                <?php if(!empty($content['result']['link'])){ ?>
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="<?php echo $content['link']; ?>" allowfullscreen></iframe>
+                    <iframe class="embed-responsive-item" src="<?php echo $content['result']['link']; ?>" allowfullscreen></iframe>
                 </div>
                 <?php }else{ ?>
                     <p class="text-center alert alert-danger">ไม่พบวีดีโอ</p>
