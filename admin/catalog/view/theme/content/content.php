@@ -55,7 +55,7 @@
                   </td>
                   <td>
                       <?php echo $val['title']; ?>
-                      <div><?php echo mb_strimwidth(strip_tags($val['detail']), 0, 10, "..."); ?></div>
+                      <div><?php echo mb_strimwidth(strip_tags(htmlspecialchars_decode($val['detail'])), 0, 10, "..."); ?></div>
                       <br/>
                       <small>
                           <?php echo $val['date_create']; ?>

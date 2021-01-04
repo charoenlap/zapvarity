@@ -69,22 +69,17 @@
                 <div class="col-lg-12">
                     <ul class="top-header-social text-right">
                         <li>
-                            <a href="#" class="" target="_blank">
+                            <a href="https://www.facebook.com/zappvariety.news" class="" target="_blank">
                                 <i class='bx bxl-facebook'></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="" target="_blank">
+                            <a href="https://www.instagram.com/zapp_variety/" class="" target="_blank">
                                 <i class='bx bxl-instagram'></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="" target="_blank">
-                                <i class='bx bxl-twitter'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="" target="_blank">
+                            <a href="https://www.youtube.com/channel/UC5-8XgmQf4kEfl3OXDCca0g" class="" target="_blank">
                                 <i class='bx bxl-youtube'></i>
                             </a>
                         </li>

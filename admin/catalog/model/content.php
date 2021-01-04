@@ -49,7 +49,7 @@
 						'content_id' => $content_id,
 						'lang_id' => $key,
 						'title' => $val,
-						'detail' => $data['detail'][$key]
+						'detail' => htmlentities($data['detail'][$key])
 					);
 					$content_id_detail = $this->insert('content_detail',$insert_detail);
 				}

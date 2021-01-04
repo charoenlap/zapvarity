@@ -11,6 +11,7 @@
         public function video_detail(){
             $data = array();
             $data['title'] = "zappvariety - รายละเอียดวีดีโอ";
+            
             $this->view('video_detail',$data);
         }
 	}
