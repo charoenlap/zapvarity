@@ -87,14 +87,16 @@
             $count_img = 0;
             foreach($files['tmp_name'] as $key => $val){
               $img_name = $count_img.'_'.$files['name'][$key];
-              uploadMuntiple($files['tmp_name'][$key],DOCUMENT_ROOT.$path.'/',$img_name);
-              $count_img++;
-              $insert_data = array(
-                'content_id' => $id,
-                'path' => $path.'/'.$img_name,
-                'name' => $img_name
-              );
-              $content->addImg($insert_data);
+              if(!empty($files['name'][$key])){
+                uploadMuntiple($files['tmp_name'][$key],DOCUMENT_ROOT.$path.'/',$img_name);
+                $count_img++;
+                $insert_data = array(
+                  'content_id' => $id,
+                  'path' => $path.'/'.$img_name,
+                  'name' => $img_name
+                );
+                $content->addImg($insert_data);
+              }
             }
           }
           $this->redirect('content/contentEdit&id='.$id.'&result=success');
