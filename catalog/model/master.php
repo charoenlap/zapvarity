@@ -49,7 +49,7 @@
 
 					$result[] = array(
 						'result' 	=> $val,
-						'cover'		=> $result_img['path'],
+						'cover'		=> (isset($result_img['path'])?$result_img['path']:''),
 						'id'		=> $id,
 						'tags'		=> $result_tags
 					);

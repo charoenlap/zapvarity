@@ -1,6 +1,10 @@
 <?php
 	header('Access-Control-Allow-Origin: *');  
 
+	ini_set("post_max_size", "30M");
+    ini_set("upload_max_filesize", "30M");
+    ini_set("memory_limit", "-1"); 
+
   	define('DEBUG_MODE',false);
 	ini_set('display_errors', 1);
 	ini_set('display_startup_errors', 1);

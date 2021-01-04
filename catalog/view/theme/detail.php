@@ -52,7 +52,7 @@
             </div> -->
             <div class="col-md-8 text-justify " style="margin-top: 20px;">
                 <h5 class="text-danger text-center font-weight-bold"><?php echo $content['result']['title']; ?></h5>
-                <?php echo $content['result']['detail']; ?>
+                <?php echo htmlentities($content['result']['detail']); ?>
                 <!-- <div class="container">
                     <a class="badge badge-secondary text-light" href="<?php echo route('cat'); ?>">#อีรัน</a>
                     <a class="badge badge-secondary text-light" href="<?php echo route('cat'); ?>">#สถานเอกอัครราชทูตไทย</a>
