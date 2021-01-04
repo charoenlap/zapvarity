@@ -17,6 +17,17 @@
     <div class="container-fluid-img-overlay wrapper">
         <img src="<?php echo photo($content['cover']);?>" alt="<?php echo $content['result']['title']; ?>" class="img-cover-detail-size img-reponsive img-reponsive-center ">
     </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 mb-2 pl-1 pr-1">
+                <?php if(!empty($content['link'])){ ?>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="<?php echo $content['link']; ?>" allowfullscreen></iframe>
+                </div>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-1 article-footer">
