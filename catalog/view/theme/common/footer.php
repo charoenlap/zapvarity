@@ -22,6 +22,11 @@
                     <i class='bx bxl-youtube'></i>
                 </a>
             </li>
+            <li>
+              <a href="<?php echo route('contact'); ?>" class="" target="_blank">
+                   ติดต่อเรา
+              </a>
+            </li>
           </ul>
         </div>
       </div>
