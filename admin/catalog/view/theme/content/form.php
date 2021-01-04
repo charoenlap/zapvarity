@@ -68,6 +68,26 @@
     <!-- Default box -->
     <div class="card">
       <div class="card-header">
+        <h3 class="card-title">ลิงค์วีดีโอ</h3>
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+            <i class="fas fa-minus"></i>
+          </button>
+          <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-12 mb-3">
+              <input type="text" class="form-control" name="link" value="<?php echo (isset($content_detail[0]['link'])?$content_detail[0]['link']:'');?>" >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
         <h3 class="card-title">หมวดหมู่</h3>
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -80,10 +100,19 @@
       </div>
       <div class="card-body">
         <div class="row">
-          <?php foreach($tags as $val){?>
-          <div class="col-md-4 mb-3">
-            <input type="checkbox" name="tags[]" id="tags<?php echo $val['id'];?>" value="<?php echo $val['id'];?>" <?php echo (in_array($val['id'],$checked_tags)?'checked':'');?> > <?php echo $val['title']; ?>
-          </div>
+          <?php 
+          if(is_array($tags)){
+            foreach($tags as $val){
+              $check = '';
+              if(isset($checked_tags)){
+                $check = (in_array($val['id'],$checked_tags)?'checked':'');
+              }
+          ?>
+            <div class="col-md-4 mb-3">
+              <input type="checkbox" name="tags[]" id="tags<?php echo $val['id'];?>" value="<?php echo $val['id'];?>" 
+              <?php echo $check;?> > <label for="tags<?php echo $val['id'];?>"><?php echo $val['title']; ?></label>
+            </div>
+            <?php } ?>
           <?php } ?>
         </div>
       </div>

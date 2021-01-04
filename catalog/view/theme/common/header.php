@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="html/assets/css/custom.css">
     <link rel="icon" type="html/assets/img/Logo_Zapp.png" href="html/assets/img/Logo_Zapp.png">
 
-    <title><?php echo $title; ?></title>
+    <title><?php echo (!empty($title)?$title:NAME_WEBSITE); ?></title>
 
 </head>
 <style>
@@ -69,22 +69,22 @@
                 <div class="col-lg-12">
                     <ul class="top-header-social text-right">
                         <li>
-                            <a href="#" class="facebook" target="_blank">
+                            <a href="#" class="" target="_blank">
                                 <i class='bx bxl-facebook'></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="pinterest" target="_blank">
+                            <a href="#" class="" target="_blank">
                                 <i class='bx bxl-instagram'></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="twitter" target="_blank">
+                            <a href="#" class="" target="_blank">
                                 <i class='bx bxl-twitter'></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="linkedin" target="_blank">
+                            <a href="#" class="" target="_blank">
                                 <i class='bx bxl-youtube'></i>
                             </a>
                         </li>
@@ -114,56 +114,13 @@
                     </a>
                     <div class="collapse navbar-collapse mean-menu overflow-auto" id="navbarSupportedContent">
                         <ul class="navbar-nav font-head">
+                            <?php foreach ($menu as $key => $value) { ?>
                             <li class="nav-item">
-                                <a href="<?PHP echo route('cat'); ?>" class="nav-link">
-                                    ข่าวหน้า1
+                                <a href="<?PHP echo route('cat&id='.$value['id']); ?>" class="nav-link">
+                                    <?php echo $value['title']; ?>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="<?PHP echo route('cat'); ?>" class="nav-link">
-                                    ข่าวประชาสัมพันธ์
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="<?PHP echo route('cat'); ?>" class="nav-link">
-                                    ข่าวบันเทิง
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="<?PHP echo route('cat'); ?>" class="nav-link">
-                                    ผู้ชาย
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="<?PHP echo route('cat'); ?>" class="nav-link">
-                                    ผู้หญิง
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="<?PHP echo route('cat'); ?>" class="nav-link">
-                                    หนังน่าดู
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="<?PHP echo route('cat'); ?>" class="nav-link">
-                                    เพลงน่าฟัง
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="<?PHP echo route('cat'); ?>" class="nav-link">
-                                    ละครยอดฮิต
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="<?PHP echo route('cat'); ?>" class="nav-link">
-                                    การศึกษา
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="<?PHP echo route('cat'); ?>" class="nav-link">
-                                    กีฬามันส์
-                                </a>
-                            </li>
+                            <?php } ?>
                             <li class="nav-item">
                                 <a href="<?php echo route('video'); ?>" class="nav-link">
                                     วีดีโอ

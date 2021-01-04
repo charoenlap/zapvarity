@@ -17,7 +17,8 @@
         $result = $tags->add($data);
         if($result['result']=='success'){
           $tags_id = $result['tags_id'];
-          $this->redirect('tags/tagsEdit&id='.$result['tags_id']);
+          // $this->redirect('tags/tagsEdit&id='.$result['tags_id']);
+          $this->redirect('tags');
         }
       }else{
         $data['title'] = 'เพิ่มป้าย';

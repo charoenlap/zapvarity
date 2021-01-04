@@ -40,7 +40,7 @@
             foreach($files['tmp_name'] as $key => $val){
               if(!empty($files['name'][$key])){
                 $img_name = $count_img.'_'.$files['name'][$key];
-                uploadMuntiple($files['tmp_name'][$key],DOCUMENT_ROOT.$path,$img_name);
+                uploadMuntiple($files['tmp_name'][$key],DOCUMENT_ROOT.$path.'/',$img_name);
                 $count_img++;
                 $insert_data = array(
                   'content_id' => $content_id,
@@ -51,7 +51,8 @@
               }
             }
           }
-          $this->redirect('content/contentEdit&id='.$result['content_id']);
+          // $this->redirect('content/contentEdit&id='.$result['content_id']);
+          $this->redirect('content');
         }
       }else{
         $data['title'] = 'เพิ่มเนื้อหา';
@@ -86,10 +87,10 @@
             $count_img = 0;
             foreach($files['tmp_name'] as $key => $val){
               $img_name = $count_img.'_'.$files['name'][$key];
-              uploadMuntiple($files['tmp_name'][$key],DOCUMENT_ROOT.$path,$img_name);
+              uploadMuntiple($files['tmp_name'][$key],DOCUMENT_ROOT.$path.'/',$img_name);
               $count_img++;
               $insert_data = array(
-                'content_id' => $content_id,
+                'content_id' => $id,
                 'path' => $path.'/'.$img_name,
                 'name' => $img_name
               );
@@ -114,6 +115,7 @@
         }
         $content = $this->model('content')->get($select)['result'];
         $data['files'] = $this->model('content')->getFiles($select)['result'];
+        $data['content_detail'] = $content;
 
         $language = $this->model('language')->get()['result'];
         $data['content'] = array();

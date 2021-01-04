@@ -40,7 +40,8 @@
 				$date = date('Y-m-d H:i:s');
 				$insert_content = array(
 					'user_id' => 0,
-					'date_create' => $date
+					'date_create' => $date,
+					'link'	=> $data['link']
 				);
 				$content_id = $this->insert('content',$insert_content);
 				foreach($data['title'] as $key => $val){
@@ -82,7 +83,8 @@
 					$date = date('Y-m-d H:i:s');
 					$update_content = array(
 						// 'user_id' => 0,
-						'date_create' => $date
+						'date_create' => $date,
+						'link'	=> $data['link']
 					);
 					$result_content = $this->update('content',$update_content,"id=".$content_id);
 					foreach($data['title'] as $key => $val){
