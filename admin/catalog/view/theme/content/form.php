@@ -49,7 +49,7 @@
               </div>
               <div class="col-md-12 mb-3">
                 <label>รายละเอียด <?php echo $val['title']; ?></label>
-                <textarea id="summernote-<?php echo $val['id'];?>" name="detail[<?php echo $val['id'];?>]"><?php echo $detail;?></textarea>
+                <textarea id="summernote-<?php echo $val['id'];?>" name="detail[<?php echo $val['id'];?>]"><?php echo htmlspecialchars_decode($detail);?></textarea>
               </div>
             </div>
           </div>

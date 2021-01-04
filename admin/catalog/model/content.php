@@ -45,11 +45,12 @@
 				);
 				$content_id = $this->insert('content',$insert_content);
 				foreach($data['title'] as $key => $val){
+					$detail = $this->escape(htmlspecialchars($data['detail'][$key], ENT_QUOTES));
 					$insert_detail = array(
 						'content_id' => $content_id,
 						'lang_id' => $key,
-						'title' => $val,
-						'detail' => htmlentities($data['detail'][$key])
+						'title' => $this->escape($val),
+						'detail' => $detail
 					);
 					$content_id_detail = $this->insert('content_detail',$insert_detail);
 				}
@@ -88,9 +89,10 @@
 					);
 					$result_content = $this->update('content',$update_content,"id=".$content_id);
 					foreach($data['title'] as $key => $val){
+						$detail = $this->escape(htmlspecialchars($data['detail'][$key], ENT_QUOTES));
 						$update_detail = array(
-							'title' => $val,
-							'detail' => $data['detail'][$key]
+							'title' => $this->escape($val),
+							'detail' => $detail
 						);
 						$where = "lang_id = ".$key." AND content_id = ".$content_id;
 						$result_content_detail = $this->update('content_detail',$update_detail,$where);
