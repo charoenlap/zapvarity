@@ -1,7 +1,7 @@
 <section class="main-hot-news">
     <div style="background-color: black; padding-top:50px;">
         <div class="container">
-            <h6 class="text-light"><span class="badge badge-danger"><?php echo $topic; ?></span> <?php echo $content['result']['date_create']; ?></h6>
+            <h6 class="text-light"><span class="badge badge-danger"><?php echo $title; ?></span> <?php echo $content['result']['date_create']; ?></h6>
             <div class="row">
                 <div class="col">
                     <div class="single-most-popular-news">
