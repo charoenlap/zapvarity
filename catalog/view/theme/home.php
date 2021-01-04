@@ -8,10 +8,12 @@
 						<img src="<?php echo $val['cover']; ?>" alt="<?php echo $tag['title']; ?>">
 					</a>
 					<div class="news-content">
+						<?php if(isset($val['tags'])){ ?>
 						<?php foreach($val['tags'] as $tag){?>
 							<div class="tag bg-danger">
 								<?php echo $tag['title']; ?>
 							</div>
+						<?php } ?>
 						<?php } ?>
 						<h3>
 							<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">

@@ -74,7 +74,7 @@
 						</div>
 						<div class="popular-news-content">
 							<span class="font-weight-bold">
-								<?php echo mb_strimwidth(strip_tags($val['result']['detail']), 0, 50, "..."); ?>
+								<?php echo mb_strimwidth(strip_tags(html_entity_decode($val['result']['detail'])), 0, 50, "..."); ?>
 							</span>
 						</div>
 					</div>

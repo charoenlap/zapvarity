@@ -54,8 +54,10 @@
                       <?php echo $i++; ?>
                   </td>
                   <td>
-                      <?php echo $val['title']; ?>
-                      <div><?php echo mb_strimwidth(strip_tags(htmlspecialchars_decode($val['detail'])), 0, 10, "..."); ?></div>
+                      <?php echo mb_strimwidth($val['title'], 0, 50, "..."); ?>
+                      <div>
+                        <small><?php echo mb_strimwidth(strip_tags(html_entity_decode($val['detail'])), 0, 100, "..."); ?></small>
+                      </div>
                       <br/>
                       <small>
                           <?php echo $val['date_create']; ?>
