@@ -26,7 +26,7 @@
             <div class="col-md-10">
                 <h5 class="text-danger text-center font-weight-bold"><?php echo $content['result']['title']; ?></h5>
                 <span class="text-warning" style="font-size: 12px;"><?php echo $content['result']['date_create']; ?></span>
-                <?php echo $content['result']['detail']; ?>
+                <?php echo html_entity_decode($content['result']['detail']); ?>
                 <hr>
             </div>
             <div class="col-md-2">

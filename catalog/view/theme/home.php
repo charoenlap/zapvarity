@@ -86,6 +86,7 @@
 		</div>
 	</div>
 </section>
+<?php if(count($content_1)){ ?>
 <section class="main-hot-news">
 	<div class="page-title-area mb-5">
 		<div class="container">
@@ -109,8 +110,8 @@
 							<a href="<?php echo route('detail&id='.$val['id']); ?>"><?php echo $val['result']['title']; ?></a>
 						</h3>
 						<h6>
-							<?php echo $val['result']['detail']; ?>
-							<?php //echo mb_strimwidth(strip_tags(html_entity_decode($val['result']['detail'])), 0, 50, "..."); ?>
+							<?php //echo html_entity_decode($val['result']['detail']); ?>
+							<?php echo mb_strimwidth(strip_tags(html_entity_decode($val['result']['detail'])), 0, 50, "..."); ?>
 						</h6>
 					</div>
 				</div>
@@ -119,7 +120,8 @@
 		</div>
 	</div>
 </section>
-
+<?php } ?>
+<?php if($content_2){ ?>
 <section class="default-news-area">
 	<div class="container">
 		<div class="row">
@@ -154,7 +156,7 @@
 													<?php echo $val['result']['title']; ?>
 												</a>
 											</h3>
-											<p><?php echo mb_strimwidth(strip_tags($val['result']['detail']), 0, 50, "..."); ?></p>
+											<p><?php echo mb_strimwidth(strip_tags(html_entity_decode($val['result']['detail'])), 0, 50, "..."); ?></p>
 											<p><?php echo $val['result']['date_create'];?></p>
 										</div>
 									</div>
@@ -189,7 +191,7 @@
 		</div>
 	</div>
 </section>
-
+<?php } ?>
 <?php /*<section class="default-news-area">
 	<div class="container">
 		<div class="row justify-content-center">

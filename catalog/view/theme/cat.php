@@ -34,7 +34,7 @@
 													<?php echo $val['result']['title']; ?>
 												</a>
 											</h3>
-											<p><?php echo mb_strimwidth(strip_tags($val['result']['detail']), 0, 50, "..."); ?></p>
+											<p><?php echo mb_strimwidth(strip_tags(html_entity_decode($val['result']['detail'])), 0, 50, "..."); ?></p>
 											<p><?php echo $val['result']['date_create']; ?></p>
 										</div>
 									</div>
