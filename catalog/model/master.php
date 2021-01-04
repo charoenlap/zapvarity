@@ -47,7 +47,7 @@
 					AND lang_id = ".DEFAULT_LANGUAGE;
 					$result_tags = $this->query($sql_tags)->rows;
 
-					$result[] = array(
+					$result[] = array( 
 						'result' 	=> $val,
 						'cover'		=> (isset($result_img['path'])?$result_img['path']:''),
 						'id'		=> $id,
