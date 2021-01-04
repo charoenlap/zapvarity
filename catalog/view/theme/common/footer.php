@@ -8,24 +8,19 @@
           </a>
           <ul class="social">
             <li>
-              <a href="#" class="facebook" target="_blank">
-                <i class='bx bxl-facebook'></i>
-              </a>
+                <a href="https://www.facebook.com/zappvariety.news" class="" target="_blank">
+                    <i class='bx bxl-facebook'></i>
+                </a>
             </li>
             <li>
-              <a href="#" class="twitter" target="_blank">
-                <i class='bx bxl-instagram'></i>
-              </a>
+                <a href="https://www.instagram.com/zapp_variety/" class="" target="_blank">
+                    <i class='bx bxl-instagram'></i>
+                </a>
             </li>
             <li>
-              <a href="#" class="linkedin" target="_blank">
-                <i class='bx bxl-twitter'></i>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="linkedin" target="_blank">
-                <i class='bx bxl-youtube'></i>
-              </a>
+                <a href="https://www.youtube.com/channel/UC5-8XgmQf4kEfl3OXDCca0g" class="" target="_blank">
+                    <i class='bx bxl-youtube'></i>
+                </a>
             </li>
           </ul>
         </div>
@@ -34,12 +29,9 @@
     <div class="row justify-content-md-center">
       <div class="col-md-12">
         <ul class="footer-link">
-          <li><a href="<?php echo route('home') ?>">หน้าแรก</a></li>
-          <li><a href="<?php echo route('cat') ?>">ข่าวหน้า1</a></li>
-          <li><a href="<?php echo route('cat') ?>">ข่าวประชาสัมพันธ์</a></li>
-          <li><a href="<?php echo route('cat') ?>">ข่าวบันเทิง</a></li>
-          <li><a href="<?php echo route('video') ?>">วีดีโอ</a></li>
-          <li><a href="<?php echo route('contact') ?>">ติดต่อเรา</a></li>
+          <?php foreach ($menu as $key => $value) { ?>
+          <li><a href="<?PHP echo route('cat&id='.$value['id']); ?>"><?php echo $value['title']; ?></a></li>
+          <?php } ?>
         </ul>
       </div>
     </div>

@@ -10,9 +10,17 @@
         }
         public function video_detail(){
             $data = array();
-            $data['title'] = "zappvariety - รายละเอียดวีดีโอ";
-            
-            $this->view('video_detail',$data);
+            $id = (int)get('id');
+            if($id){
+                $data['title'] = "zappvariety - รายละเอียดวีดีโอ";
+                $data['content'] = $this->model('master')->get($id);
+                $data['related'] = $this->model('master')->getRelated($id);
+                $data['topic'] = $this->model('master')->getTopic($id)['title'];
+
+                $this->view('video_detail',$data);
+            }else{
+                $this->view('not_found',$data);
+            }
         }
 	}
 ?>

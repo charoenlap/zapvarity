@@ -62,48 +62,20 @@
                 <div class="section-title" style="margin-top: 20px;">
                     <h2 class="font-weight-bold text-danger">ข่าวที่เกี่ยวข้อง</h2>
                 </div>
-                <a href="<?php echo route('detail'); ?>" class="text-decoration-none">
+                <?php foreach($related as $val){ 
+                    ?>
+                <a href="<?php echo route('detail&id='.$val['result']['id']); ?>" class="text-decoration-none">
                     <div class="single-most-popular-news">
                         <div class="popular-news-image">
-                            <img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
+                            <img src="<?php echo $val['cover']; ?>" alt="image">
                         </div>
                         <div class="popular-news-content">
-                            <span class="font-weight-bold">คอหวยควรรู้! สามารถขึ้นเงินได้ที่ ธ.ก.ส. แล้ว เริ่ม 1 มี.ค.63</span>
+                            <span class="font-weight-bold"><?php echo $val['result']['title']; ?></span>
                         </div>
                     </div>
                 </a>
                 <hr>
-                <a href="<?php echo route('detail'); ?>" class="text-decoration-none">
-                    <div class="single-most-popular-news">
-                        <div class="popular-news-image">
-                            <img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-                        </div>
-                        <div class="popular-news-content">
-                            <span class="font-weight-bold">คอหวยควรรู้! สามารถขึ้นเงินได้ที่ ธ.ก.ส. แล้ว เริ่ม 1 มี.ค.63</span>
-                        </div>
-                    </div>
-                </a>
-                <hr><a href="<?php echo route('detail'); ?>" class="text-decoration-none">
-                    <div class="single-most-popular-news">
-                        <div class="popular-news-image">
-                            <img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-                        </div>
-                        <div class="popular-news-content">
-                            <span class="font-weight-bold">คอหวยควรรู้! สามารถขึ้นเงินได้ที่ ธ.ก.ส. แล้ว เริ่ม 1 มี.ค.63</span>
-                        </div>
-                    </div>
-                </a>
-                <hr><a href="<?php echo route('detail'); ?>" class="text-decoration-none">
-                    <div class="single-most-popular-news">
-                        <div class="popular-news-image">
-                            <img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-                        </div>
-                        <div class="popular-news-content">
-                            <span class="font-weight-bold">คอหวยควรรู้! สามารถขึ้นเงินได้ที่ ธ.ก.ส. แล้ว เริ่ม 1 มี.ค.63</span>
-                        </div>
-                    </div>
-                </a>
-                <hr>
+                <?php } ?>
             </div>
         </div>
     </div>

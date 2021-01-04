@@ -6,7 +6,9 @@
 			if($id){
 				$data['title'] = "zappvariety - ศูนย์รวมข่าว";
 				$data['content'] = $this->model('master')->get($id);
-				$data['topic'] = $this->model('master')->getTitle($id)['title'];
+				$data['related'] = $this->model('master')->getRelated($id);
+				$data['topic'] = $this->model('master')->getTopic($id)['title'];
+
 	 	    	$this->view('detail',$data);
 	 	    }else{
 	 	    	$this->view('not_found',$data);

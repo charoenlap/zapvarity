@@ -1,65 +1,83 @@
 <section class="main-news-area">
 	<div class="container">
 		<div class="row">
+			<?php $val = $lasted[0]; ?>
 			<div class="col-lg-8">
 				<div class="single-main-news">
-					<a href="<?php echo route('detail'); ?>">
-						<img src="html/assets/img/main-news/main-news-1.jpg" alt="image">
+					<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
+						<img src="<?php echo $val['cover']; ?>" alt="<?php echo $tag['title']; ?>">
 					</a>
 					<div class="news-content">
-						<div class="tag bg-danger">ข่าวหน้า1</div>
+						<?php foreach($val['tags'] as $tag){?>
+							<div class="tag bg-danger">
+								<?php echo $tag['title']; ?>
+							</div>
+						<?php } ?>
 						<h3>
-							<a href="<?php echo route('detail'); ?>">สธ.นครปฐม ยืนยัน นครปฐม ติดเชื้อ โควิด ระลอกใหม่ เพิ่ม 4 ราย</a>
+							<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
+								<?php echo $val['result']['title']; ?>
+							</a>
 						</h3>
-						<span>21 ธันวาคม พ.ศ. 2563</span>
+						<span><?php echo $val['result']['date_create']; ?></span>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-4">
+				<?php $val = $lasted[1]; ?>
 				<div class="single-main-news-inner">
-					<a href="<?php echo route('detail'); ?>">
-						<img src="html/assets/img/main-news/main-news-2.jpg" alt="image">
+					<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
+						<img src="<?php echo $val['cover']; ?>" alt="<?php echo $tag['title']; ?>">
 					</a>
 					<div class="news-content">
-						<div class="tag bg-danger">ข่าวประชาสัมพันธ์</div>
+						<?php foreach($val['tags'] as $tag){?>
+							<div class="tag bg-danger">
+								<?php echo $tag['title']; ?>
+							</div>
+						<?php } ?>
 						<h3>
-							<a href="<?php echo route('detail'); ?>">จ.ภูเก็ต ตื่นตัว ป้องกันเต็มที่ หลังพบผู้ติดเชื้อโควิด-19 จำนวน 3 ราย</a>
+							<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
+								<?php echo $val['result']['title']; ?>
+							</a>
 						</h3>
-						<span>21 ธันวาคม พ.ศ. 2563</span>
+						<span><?php echo $val['result']['date_create']; ?></span>
 					</div>
 				</div>
+				<?php $val = $lasted[2]; ?>
 				<div class="row m-0">
 					<div class="single-main-news-box media align-items-center">
 						<div class="col-md-4 p-0">
-							<a href="<?php echo route('detail'); ?>">
-								<img src="html/assets/img/main-news/main-news-3.jpg" alt="image">
+							<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
+								<img src="<?php echo $val['cover']; ?>" alt="<?php echo $tag['title']; ?>">
 							</a>
 						</div>
 						<div class="col-md-8">
 							<div class="news-content">
-								<div class="tag">กีฬามันส์</div>
 								<h6>
-									<a href="<?php echo route('detail'); ?>">“ เพชฌฆาตปืนกล ” สอยคิวมือ 1 โลก ยก รอนนี โอซัลลิแวน ไอดอลตลอดกาล</a>
+									<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
+										<?php echo $val['result']['title']; ?>
+									</a>
 								</h6>
-								<span>21 ธันวาคม พ.ศ. 2563</span>
+								<span><?php echo $val['result']['date_create']; ?></span>
 							</div>
 						</div>
 					</div>
 				</div>
+				<?php $val = $lasted[3]; ?>
 				<div class="row m-0">
 					<div class="single-main-news-box media align-items-center">
 						<div class="col-md-4 p-0">
-							<a href="<?php echo route('detail'); ?>">
-								<img src="html/assets/img/main-news/main-news-4.jpg" alt="image">
+							<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
+								<img src="<?php echo $val['cover']; ?>" alt="<?php echo $tag['title']; ?>">
 							</a>
 						</div>
 						<div class="col-md-8">
 							<div class="news-content">
-								<div class="tag">ข่าวบันเทิง</div>
 								<h6>
-									<a href="<?php echo route('detail'); ?>">รัศมีแข ปล่อยหมัดหนัก หลังจากขึ้นชกใน 10Fight10</a>
+									<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
+										<?php echo $val['result']['title']; ?>
+									</a>
 								</h6>
-								<span>21 ธันวาคม พ.ศ. 2563</span>
+								<span><?php echo $val['result']['date_create']; ?></span>
 							</div>
 						</div>
 					</div>
@@ -73,63 +91,31 @@
 	<div class="page-title-area mb-5">
 		<div class="container">
 			<div class="page-title-content text-center">
-				<h2 class="font-weight-bold"><a href="<?php echo route('cat'); ?>" class="text-danger">ข่าวหน้า1</a> </h2>
+				<h2 class="font-weight-bold"><a href="<?php echo route('cat&id=1'); ?>" class="text-danger"><?php echo $content_topic_1; ?></a> </h2>
 			</div>
 		</div>
 	</div>
 	<div class="container">
 		<div class="row">
+			<?php foreach($content_1 as $val){ ?>
 			<div class="col-md-4">
 				<div class="single-most-popular-news">
 					<div class="popular-news-image">
-						<a href="<?php echo route('detail'); ?>">
-							<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
+						<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
+							<img src="<?php echo $val['cover'];?>" alt="<?php echo $val['result']['title']; ?>">
 						</a>
 					</div>
 					<div class="popular-news-content">
 						<h3 class="font-weight-bold">
-							<a href="#">สุดดีใจ! นาทีชีวิต สาวถูกสามีเก่าฉุด เผย ไม่คิดว่าจะได้กลับมา</a>
+							<a href="<?php echo route('detail&id='.$val['id']); ?>"><?php echo $val['result']['title']; ?></a>
 						</h3>
 						<h6>
-							ปลอดภัยแล้ว! นาทีชีวิต สาวถูกสามีเก่าฉุด เผย ไม่คิดว่าจะได้กลับมา หลังถูกลักพาตัว นาน 6 วัน
+							<?php echo mb_strimwidth(strip_tags($val['result']['detail']), 0, 50, "..."); ?>
 						</h6>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4">
-				<div class="single-most-popular-news">
-					<div class="popular-news-image">
-						<a href="<?php echo route('detail'); ?>">
-							<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-						</a>
-					</div>
-					<div class="popular-news-content">
-						<h3 class="font-weight-bold">
-							<a href="#">สุดดีใจ! นาทีชีวิต สาวถูกสามีเก่าฉุด เผย ไม่คิดว่าจะได้กลับมา</a>
-						</h3>
-						<h6>
-							ปลอดภัยแล้ว! นาทีชีวิต สาวถูกสามีเก่าฉุด เผย ไม่คิดว่าจะได้กลับมา หลังถูกลักพาตัว นาน 6 วัน
-						</h6>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="single-most-popular-news">
-					<div class="popular-news-image">
-						<a href="<?php echo route('detail'); ?>">
-							<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-						</a>
-					</div>
-					<div class="popular-news-content">
-						<h3 class="font-weight-bold">
-							<a href="#">สุดดีใจ! นาทีชีวิต สาวถูกสามีเก่าฉุด เผย ไม่คิดว่าจะได้กลับมา</a>
-						</h3>
-						<h6>
-							ปลอดภัยแล้ว! นาทีชีวิต สาวถูกสามีเก่าฉุด เผย ไม่คิดว่าจะได้กลับมา หลังถูกลักพาตัว นาน 6 วัน
-						</h6>
-					</div>
-				</div>
-			</div>
+			<?php } ?>
 		</div>
 	</div>
 </section>
@@ -141,28 +127,35 @@
 				<div class="most-popular-news">
 					<div class="section-title pt-4">
 						<a href="<?php echo route('cat'); ?>" class="text-decoration-none">
-							<h2 class="font-weight-bold text-danger">ข่าวประชาสัมพันธ์</h2>
+							<h2 class="font-weight-bold text-danger"><?php echo $content_topic_2; ?></h2>
 						</a>
 					</div>
+					<?php foreach($content_2 as $val){ ?>
 					<a href="<?php echo route('detail'); ?>" class="text-decoration-none">
 						<div class="most-popular-post border-0">
 							<div class="single-news-item">
 								<div class="row align-items-center">
 									<div class="col-lg-5">
 										<div class="news-image">
-											<a href="<?php echo route('detail'); ?>">
-												<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
+											<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
+												<img src="<?php echo $val['cover'];?>" alt="image">
 											</a>
 										</div>
 									</div>
 									<div class="col-lg-7">
 										<div class="news-content">
-											<span class="badge badge-danger text-wrap text-light">ข่าวประชาสัมพันธ์</span>
+											<?php foreach($val['tags'] as $tag){?>
+												<span class="badge badge-danger text-wrap text-light">
+													<?php echo $tag['title']; ?>
+												</span>
+											<?php } ?>
 											<h3>
-												<a href="<?php echo route('detail'); ?>">เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย ติดเชื้อเพิ่ม 382 ราย</a>
+												<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
+													<?php echo $val['result']['title']; ?>
+												</a>
 											</h3>
-											<p>ศบค. รายงาน วันนี้ 21 ธ.ค. 63 เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย เพิ่ม 382 ราย ส่วนใหญ่ไม่มีอาการ ดันยอดติดเชื้อสะสม 5,289 ราย</p>
-											<p>21 ธันวาคม พ.ศ. 2563 | เวลา 12:12 น.</p>
+											<p><?php echo mb_strimwidth(strip_tags($val['result']['detail']), 0, 50, "..."); ?></p>
+											<p><?php echo $val['result']['date_create'];?></p>
 										</div>
 									</div>
 								</div>
@@ -170,305 +163,7 @@
 						</div>
 					</a>
 					<hr>
-					<a href="<?php echo route('detail'); ?>" class="text-decoration-none">
-						<div class="most-popular-post border-0">
-							<div class="single-news-item">
-								<div class="row align-items-center">
-									<div class="col-lg-5">
-										<div class="news-image">
-											<a href="<?php echo route('detail'); ?>">
-												<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-											</a>
-										</div>
-									</div>
-									<div class="col-lg-7">
-										<div class="news-content">
-											<span class="badge badge-danger text-wrap text-light">ข่าวประชาสัมพันธ์</span>
-											<h3>
-												<a href="<?php echo route('detail'); ?>">เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย ติดเชื้อเพิ่ม 382 ราย</a>
-											</h3>
-											<p>ศบค. รายงาน วันนี้ 21 ธ.ค. 63 เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย เพิ่ม 382 ราย ส่วนใหญ่ไม่มีอาการ ดันยอดติดเชื้อสะสม 5,289 ราย</p>
-											<p>21 ธันวาคม พ.ศ. 2563 | เวลา 12:12 น.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</a>
-					<hr>
-					<a href="<?php echo route('detail'); ?>" class="text-decoration-none">
-						<div class="most-popular-post border-0">
-							<div class="single-news-item">
-								<div class="row align-items-center">
-									<div class="col-lg-5">
-										<div class="news-image">
-											<a href="<?php echo route('detail'); ?>">
-												<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-											</a>
-										</div>
-									</div>
-									<div class="col-lg-7">
-										<div class="news-content">
-											<span class="badge badge-danger text-wrap text-light">ข่าวประชาสัมพันธ์</span>
-											<h3>
-												<a href="<?php echo route('detail'); ?>">เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย ติดเชื้อเพิ่ม 382 ราย</a>
-											</h3>
-											<p>ศบค. รายงาน วันนี้ 21 ธ.ค. 63 เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย เพิ่ม 382 ราย ส่วนใหญ่ไม่มีอาการ ดันยอดติดเชื้อสะสม 5,289 ราย</p>
-											<p>21 ธันวาคม พ.ศ. 2563 | เวลา 12:12 น.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</a>
-					<hr>
-					<a href="<?php echo route('detail'); ?>" class="text-decoration-none">
-						<div class="most-popular-post border-0">
-							<div class="single-news-item">
-								<div class="row align-items-center">
-									<div class="col-lg-5">
-										<div class="news-image">
-											<a href="<?php echo route('detail'); ?>">
-												<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-											</a>
-										</div>
-									</div>
-									<div class="col-lg-7">
-										<div class="news-content">
-											<span class="badge badge-danger text-wrap text-light">ข่าวประชาสัมพันธ์</span>
-											<h3>
-												<a href="<?php echo route('detail'); ?>">เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย ติดเชื้อเพิ่ม 382 ราย</a>
-											</h3>
-											<p>ศบค. รายงาน วันนี้ 21 ธ.ค. 63 เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย เพิ่ม 382 ราย ส่วนใหญ่ไม่มีอาการ ดันยอดติดเชื้อสะสม 5,289 ราย</p>
-											<p>21 ธันวาคม พ.ศ. 2563 | เวลา 12:12 น.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</a>
-					<hr>
-
-
-					<div class="section-title pt-4">
-						<a href="<?php echo route('cat'); ?>" class="text-decoration-none">
-							<h2 class="font-weight-bold text-danger">ข่าวบันเทิง</h2>
-						</a>
-					</div>
-					<a href="<?php echo route('detail'); ?>" class="text-decoration-none">
-						<div class="most-popular-post border-0">
-							<div class="single-news-item">
-								<div class="row align-items-center">
-									<div class="col-lg-5">
-										<div class="news-image">
-											<a href="<?php echo route('detail'); ?>">
-												<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-											</a>
-										</div>
-									</div>
-									<div class="col-lg-7">
-										<div class="news-content">
-											<span class="badge badge-danger text-wrap text-light">ข่าวบันเทิง</span>
-											<h3>
-												<a href="<?php echo route('detail'); ?>">เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย ติดเชื้อเพิ่ม 382 ราย</a>
-											</h3>
-											<p>ศบค. รายงาน วันนี้ 21 ธ.ค. 63 เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย เพิ่ม 382 ราย ส่วนใหญ่ไม่มีอาการ ดันยอดติดเชื้อสะสม 5,289 ราย</p>
-											<p>21 ธันวาคม พ.ศ. 2563 | เวลา 12:12 น.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</a>
-					<hr>
-					<a href="<?php echo route('detail'); ?>" class="text-decoration-none">
-						<div class="most-popular-post border-0">
-							<div class="single-news-item">
-								<div class="row align-items-center">
-									<div class="col-lg-5">
-										<div class="news-image">
-											<a href="<?php echo route('detail'); ?>">
-												<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-											</a>
-										</div>
-									</div>
-									<div class="col-lg-7">
-										<div class="news-content">
-											<span class="badge badge-danger text-wrap text-light">ข่าวบันเทิง</span>
-											<h3>
-												<a href="<?php echo route('detail'); ?>">เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย ติดเชื้อเพิ่ม 382 ราย</a>
-											</h3>
-											<p>ศบค. รายงาน วันนี้ 21 ธ.ค. 63 เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย เพิ่ม 382 ราย ส่วนใหญ่ไม่มีอาการ ดันยอดติดเชื้อสะสม 5,289 ราย</p>
-											<p>21 ธันวาคม พ.ศ. 2563 | เวลา 12:12 น.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</a>
-					<hr>
-					<a href="<?php echo route('detail'); ?>" class="text-decoration-none">
-						<div class="most-popular-post border-0">
-							<div class="single-news-item">
-								<div class="row align-items-center">
-									<div class="col-lg-5">
-										<div class="news-image">
-											<a href="<?php echo route('detail'); ?>">
-												<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-											</a>
-										</div>
-									</div>
-									<div class="col-lg-7">
-										<div class="news-content">
-											<span class="badge badge-danger text-wrap text-light">ข่าวบันเทิง</span>
-											<h3>
-												<a href="<?php echo route('detail'); ?>">เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย ติดเชื้อเพิ่ม 382 ราย</a>
-											</h3>
-											<p>ศบค. รายงาน วันนี้ 21 ธ.ค. 63 เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย เพิ่ม 382 ราย ส่วนใหญ่ไม่มีอาการ ดันยอดติดเชื้อสะสม 5,289 ราย</p>
-											<p>21 ธันวาคม พ.ศ. 2563 | เวลา 12:12 น.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</a>
-					<hr>
-					<a href="<?php echo route('detail'); ?>" class="text-decoration-none">
-						<div class="most-popular-post border-0">
-							<div class="single-news-item">
-								<div class="row align-items-center">
-									<div class="col-lg-5">
-										<div class="news-image">
-											<a href="<?php echo route('detail'); ?>">
-												<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-											</a>
-										</div>
-									</div>
-									<div class="col-lg-7">
-										<div class="news-content">
-											<span class="badge badge-danger text-wrap text-light">ข่าวบันเทิง</span>
-											<h3>
-												<a href="<?php echo route('detail'); ?>">เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย ติดเชื้อเพิ่ม 382 ราย</a>
-											</h3>
-											<p>ศบค. รายงาน วันนี้ 21 ธ.ค. 63 เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย เพิ่ม 382 ราย ส่วนใหญ่ไม่มีอาการ ดันยอดติดเชื้อสะสม 5,289 ราย</p>
-											<p>21 ธันวาคม พ.ศ. 2563 | เวลา 12:12 น.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</a>
-					<hr>
-
-					<div class="section-title pt-4">
-						<a href="<?php echo route('cat'); ?>" class="text-decoration-none">
-							<h2 class="font-weight-bold text-danger">กีฬามันส์</h2>
-						</a>
-					</div>
-					<a href="<?php echo route('detail'); ?>" class="text-decoration-none">
-						<div class="most-popular-post border-0">
-							<div class="single-news-item">
-								<div class="row align-items-center">
-									<div class="col-lg-5">
-										<div class="news-image">
-											<a href="<?php echo route('detail'); ?>">
-												<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-											</a>
-										</div>
-									</div>
-									<div class="col-lg-7">
-										<div class="news-content">
-											<span class="badge badge-danger text-wrap text-light">กีฬามันส์</span>
-											<h3>
-												<a href="<?php echo route('detail'); ?>">เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย ติดเชื้อเพิ่ม 382 ราย</a>
-											</h3>
-											<p>ศบค. รายงาน วันนี้ 21 ธ.ค. 63 เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย เพิ่ม 382 ราย ส่วนใหญ่ไม่มีอาการ ดันยอดติดเชื้อสะสม 5,289 ราย</p>
-											<p>21 ธันวาคม พ.ศ. 2563 | เวลา 12:12 น.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</a>
-					<hr>
-					<a href="<?php echo route('detail'); ?>" class="text-decoration-none">
-						<div class="most-popular-post border-0">
-							<div class="single-news-item">
-								<div class="row align-items-center">
-									<div class="col-lg-5">
-										<div class="news-image">
-											<a href="<?php echo route('detail'); ?>">
-												<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-											</a>
-										</div>
-									</div>
-									<div class="col-lg-7">
-										<div class="news-content">
-											<span class="badge badge-danger text-wrap text-light">กีฬามันส์</span>
-											<h3>
-												<a href="<?php echo route('detail'); ?>">เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย ติดเชื้อเพิ่ม 382 ราย</a>
-											</h3>
-											<p>ศบค. รายงาน วันนี้ 21 ธ.ค. 63 เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย เพิ่ม 382 ราย ส่วนใหญ่ไม่มีอาการ ดันยอดติดเชื้อสะสม 5,289 ราย</p>
-											<p>21 ธันวาคม พ.ศ. 2563 | เวลา 12:12 น.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</a>
-					<hr>
-					<a href="<?php echo route('detail'); ?>" class="text-decoration-none">
-						<div class="most-popular-post border-0">
-							<div class="single-news-item">
-								<div class="row align-items-center">
-									<div class="col-lg-5">
-										<div class="news-image">
-											<a href="<?php echo route('detail'); ?>">
-												<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-											</a>
-										</div>
-									</div>
-									<div class="col-lg-7">
-										<div class="news-content">
-											<span class="badge badge-danger text-wrap text-light">กีฬามันส์</span>
-											<h3>
-												<a href="<?php echo route('detail'); ?>">เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย ติดเชื้อเพิ่ม 382 ราย</a>
-											</h3>
-											<p>ศบค. รายงาน วันนี้ 21 ธ.ค. 63 เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย เพิ่ม 382 ราย ส่วนใหญ่ไม่มีอาการ ดันยอดติดเชื้อสะสม 5,289 ราย</p>
-											<p>21 ธันวาคม พ.ศ. 2563 | เวลา 12:12 น.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</a>
-					<hr>
-					<a href="<?php echo route('detail'); ?>" class="text-decoration-none">
-						<div class="most-popular-post border-0">
-							<div class="single-news-item">
-								<div class="row align-items-center">
-									<div class="col-lg-5">
-										<div class="news-image">
-											<a href="<?php echo route('detail'); ?>">
-												<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-											</a>
-										</div>
-									</div>
-									<div class="col-lg-7">
-										<div class="news-content">
-											<span class="badge badge-danger text-wrap text-light">กีฬามันส์</span>
-											<h3>
-												<a href="<?php echo route('detail'); ?>">เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย ติดเชื้อเพิ่ม 382 ราย</a>
-											</h3>
-											<p>ศบค. รายงาน วันนี้ 21 ธ.ค. 63 เปิดประวัติ ผู้ติดเชื้อโควิด 19 ในไทย เพิ่ม 382 ราย ส่วนใหญ่ไม่มีอาการ ดันยอดติดเชื้อสะสม 5,289 ราย</p>
-											<p>21 ธันวาคม พ.ศ. 2563 | เวลา 12:12 น.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</a>
-					<hr>
+					<?php } ?>
 				</div>
 			</div>
 
@@ -476,126 +171,26 @@
 					<div class="section-title">
 						<h2 class="font-weight-bold text-danger">คลิปข่าวล่าสุด</h2>
 					</div>
-					<a href="<?php echo route('video/video_detail'); ?>" class="text-decoration-none">
-						<div class="single-most-popular-news">
-							<div class="popular-news-image">
-								<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-							</div>
-							<div class="popular-news-content">
-								<span class="font-weight-bold">น้ำตามหาแม่ พลัดพราก 24 ปี EP.2</span>
-							</div>
-						</div>
-					</a>
-					<hr>
-					<a href="<?php echo route('video/video_detail'); ?>" class="text-decoration-none">
-						<div class="single-most-popular-news">
-							<div class="popular-news-image">
-								<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-							</div>
-							<div class="popular-news-content">
-								<span class="font-weight-bold">น้ำตามหาแม่ พลัดพราก 24 ปี EP.2</span>
-							</div>
-						</div>
-					</a>
-					<hr>
-					<a href="<?php echo route('video/video_detail'); ?>" class="text-decoration-none">
-						<div class="single-most-popular-news">
-							<div class="popular-news-image">
-								<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-							</div>
-							<div class="popular-news-content">
-								<span class="font-weight-bold">น้ำตามหาแม่ พลัดพราก 24 ปี EP.2</span>
-							</div>
-						</div>
-					</a>
-					<hr>
-					<a href="<?php echo route('video/video_detail'); ?>" class="text-decoration-none">
-						<div class="single-most-popular-news">
-							<div class="popular-news-image">
-								<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-							</div>
-							<div class="popular-news-content">
-								<span class="font-weight-bold">น้ำตามหาแม่ พลัดพราก 24 ปี EP.2</span>
-							</div>
-						</div>
-					</a>
-					<hr>
-					<a href="<?php echo route('video/video_detail'); ?>" class="text-decoration-none">
-						<div class="single-most-popular-news">
-							<div class="popular-news-image">
-								<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-							</div>
-							<div class="popular-news-content">
-								<span class="font-weight-bold">น้ำตามหาแม่ พลัดพราก 24 ปี EP.2</span>
-							</div>
-						</div>
-					</a>
-					<hr>
-					<a href="<?php echo route('video/video_detail'); ?>" class="text-decoration-none">
-						<div class="single-most-popular-news">
-							<div class="popular-news-image">
-								<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-							</div>
-							<div class="popular-news-content">
-								<span class="font-weight-bold">น้ำตามหาแม่ พลัดพราก 24 ปี EP.2</span>
-							</div>
-						</div>
-					</a>
-					<hr>
-					<a href="<?php echo route('video/video_detail'); ?>" class="text-decoration-none">
-						<div class="single-most-popular-news">
-							<div class="popular-news-image">
-								<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-							</div>
-							<div class="popular-news-content">
-								<span class="font-weight-bold">น้ำตามหาแม่ พลัดพราก 24 ปี EP.2</span>
-							</div>
-						</div>
-					</a>
-					<hr>
-					<a href="<?php echo route('video/video_detail'); ?>" class="text-decoration-none">
-						<div class="single-most-popular-news">
-							<div class="popular-news-image">
-								<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-							</div>
-							<div class="popular-news-content">
-								<span class="font-weight-bold">น้ำตามหาแม่ พลัดพราก 24 ปี EP.2</span>
-							</div>
-						</div>
-					</a>
-					<hr>
-					<a href="<?php echo route('video/video_detail'); ?>" class="text-decoration-none">
-						<div class="single-most-popular-news">
-							<div class="popular-news-image">
-								<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-							</div>
-							<div class="popular-news-content">
-								<span class="font-weight-bold">น้ำตามหาแม่ พลัดพราก 24 ปี EP.2</span>
-							</div>
-						</div>
-					</a>
-					<hr>
-					<a href="<?php echo route('video/video_detail'); ?>" class="text-decoration-none">
-						<div class="single-most-popular-news">
-							<div class="popular-news-image">
-								<img src="html/assets/img/most-popular/most-popular-1.jpg" alt="image">
-							</div>
-							<div class="popular-news-content">
-								<span class="font-weight-bold">น้ำตามหาแม่ พลัดพราก 24 ปี EP.2</span>
-							</div>
-						</div>
-					</a>
-					<hr>
-					<a href="<?php echo route('video'); ?>" class="text-decoration-none">
-						<h5 class="text-right text-danger font-weight-bold">คลิปทั้งหมด</h5>
-					</a>
+					<?php foreach($related as $val){ ?>
+	                <a href="<?php echo route('detail&id='.$val['result']['id']); ?>" class="text-decoration-none">
+	                    <div class="single-most-popular-news">
+	                        <div class="popular-news-image">
+	                            <img src="<?php echo $val['cover']; ?>" alt="image">
+	                        </div>
+	                        <div class="popular-news-content">
+	                            <span class="font-weight-bold"><?php echo $val['result']['title']; ?></span>
+	                        </div>
+	                    </div>
+	                </a>
+	                <hr>
+	                <?php } ?>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="default-news-area">
+<?php /*<section class="default-news-area">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-6">
@@ -652,4 +247,4 @@
 			</a>
 		</div>
 	</div> -->
-</section>
+</section>*/ ?>

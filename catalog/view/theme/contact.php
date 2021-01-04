@@ -7,7 +7,10 @@
             <div class="title">
                 <h3>กรุณาระบุข้อมูล</h3>
             </div>
-            <form id="contactForm">
+            <?php if($result){?>
+                <p class="alert alert-success">ส่งข้อความสำเร็จ</p>
+            <?php } ?>
+            <form id="" action="<?php echo $action; ?>" method="POST">
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <div class="form-group">
@@ -19,7 +22,7 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="form-group">
                         <small class="font-weight-bold">นามสกุล</small>
-                            <input type="text" name="lastname" class="form-control" id="lastname" required data-error="*ระบุนามสกุล" placeholder="นามสกุล">
+                            <input type="text" name="lname" class="form-control" id="lastname" required data-error="*ระบุนามสกุล" placeholder="นามสกุล">
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
@@ -33,21 +36,21 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="form-group">
                             <small class="font-weight-bold">เบอร์โทรศัพท์</small>
-                            <input type="text" name="phone_number" class="form-control" id="phone_number" required data-error="*ระบุ เบอร์โทรศัพท์" placeholder="เบอร์โทรศัพท์">
+                            <input type="text" name="phone" class="form-control" id="phone_number" required data-error="*ระบุ เบอร์โทรศัพท์" placeholder="เบอร์โทรศัพท์">
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
                     <div class="col-lg-12 col-md-12">
                         <div class="form-group">
                             <small class="font-weight-bold">หัวข้อ</small>
-                            <input type="text" name="subject" class="form-control" id="subject" required data-error="*ระบุ หัวข้อ" placeholder="หัวข้อ">
+                            <input type="text" name="topic" class="form-control" id="subject" required data-error="*ระบุ หัวข้อ" placeholder="หัวข้อ">
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
                     <div class="col-lg-12 col-md-12">
                         <div class="form-group">
                             <small class="font-weight-bold">รายละเอียด</small>
-                            <textarea name="message" id="message" class="form-control" cols="30" rows="6" required data-error="*ระบุ รายละเอียด" placeholder="ระบุรายละเอียด..."></textarea>
+                            <textarea name="detail" id="message" class="form-control" cols="30" rows="6" required data-error="*ระบุ รายละเอียด" placeholder="ระบุรายละเอียด..."></textarea>
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
