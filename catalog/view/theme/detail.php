@@ -15,7 +15,7 @@
         </div>
     </div>
     <div class="container-fluid-img-overlay wrapper">
-        <img src="<?php echo photo($content['cover']);?>" alt="<?php echo $content['result']['title']; ?>" class="img-reponsive img-reponsive-center w-100">
+        <img src="<?php echo photo($content['cover']);?>" alt="<?php echo $content['result']['title']; ?>" class="img-cover-detail-size img-reponsive img-reponsive-center ">
     </div>
     <div class="container">
         <div class="row">
@@ -52,7 +52,9 @@
             </div> -->
             <div class="col-md-8 text-justify " style="margin-top: 20px;">
                 <h5 class="text-danger text-center font-weight-bold"><?php echo $content['result']['title']; ?></h5>
-                <?php echo html_entity_decode($content['result']['detail']); ?>
+                <div class="content-detail">
+                    <?php echo html_entity_decode($content['result']['detail']); ?>
+                </div>
                 <!-- <div class="container">
                     <a class="badge badge-secondary text-light" href="<?php echo route('cat'); ?>">#อีรัน</a>
                     <a class="badge badge-secondary text-light" href="<?php echo route('cat'); ?>">#สถานเอกอัครราชทูตไทย</a>

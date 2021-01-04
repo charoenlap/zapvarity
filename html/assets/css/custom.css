@@ -82,3 +82,14 @@ hr {
   .top-header-area {
     background-color: whitesmoke;
   }
+  .content-detail,.content-detail span {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size:16px !important;
+  }
+  .img-cover-detail-size {
+    max-height:300px;
+    width:auto;
+  }
+  .container-fluid-img-overlay.wrapper {
+    text-align: center;
+  }
