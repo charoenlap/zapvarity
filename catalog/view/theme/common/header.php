@@ -69,6 +69,11 @@
                 <div class="col-lg-12">
                     <ul class="top-header-social text-right">
                         <li>
+                            <a href="<?php echo route('contact'); ?>" class="btn text-success" target="_blank">
+                                 ติดต่อเรา
+                            </a>
+                        </li>
+                        <li>
                             <a href="https://www.facebook.com/zappvariety.news" class="" target="_blank">
                                 <i class='bx bxl-facebook'></i>
                             </a>
@@ -83,6 +88,7 @@
                                 <i class='bx bxl-youtube'></i>
                             </a>
                         </li>
+                        
                     </ul>
                 </div>
             </div>
@@ -119,11 +125,6 @@
                             <li class="nav-item">
                                 <a href="<?php echo route('video'); ?>" class="nav-link">
                                     วีดีโอ
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="<?php echo route('contact'); ?>" class="nav-link">
-                                    ติดต่อเรา
                                 </a>
                             </li>
                         </ul>
