@@ -1,4 +1,17 @@
 <?php
+	function photo($file){
+		$result = '';
+		if(!empty($file)){
+			if (file_exists(DOCUMENT_ROOT.$file)) {
+			    $result = $file;
+			} else {
+			    $result = 'noPhoto.jpg';
+			}
+		}else{
+			$result = 'noPhoto.jpg';
+		}
+		return $result;
+	}
 	function lineNoti($text){
 		$sToken = TOKEN_LINE;
 		$sMessage = $text;

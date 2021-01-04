@@ -61,7 +61,7 @@
                 <a href="<?php echo route('video/video_detail') ?>">
                     <div class="video-item">
                         <div class="video-news-image">
-                            <img src="<?php echo $value['cover']; ?>" alt="image">
+                            <img src="<?php echo photo($value['cover']); ?>" alt="image">
                             <i class='bx bx-play-circle'></i>
                         </div>
                         <div class="video-news-content">

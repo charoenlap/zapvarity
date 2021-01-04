@@ -15,7 +15,7 @@
         </div>
     </div>
     <div class="container-fluid-img-overlay wrapper">
-        <img src="<?php echo $content['cover'];?>" alt="image" class="img-reponsive img-reponsive-center w-100">
+        <img src="<?php echo photo($content['cover']);?>" alt="<?php echo $content['result']['title']; ?>" class="img-reponsive img-reponsive-center w-100">
     </div>
     <div class="container">
         <div class="row">
@@ -67,7 +67,7 @@
                 <a href="<?php echo route('detail&id='.$val['result']['id']); ?>" class="text-decoration-none">
                     <div class="single-most-popular-news">
                         <div class="popular-news-image">
-                            <img src="<?php echo $val['cover']; ?>" alt="image">
+                            <img src="<?php echo photo($val['cover']); ?>" alt="image">
                         </div>
                         <div class="popular-news-content">
                             <span class="font-weight-bold"><?php echo $val['result']['title']; ?></span>

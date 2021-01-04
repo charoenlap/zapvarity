@@ -174,3 +174,8 @@
   </form>
 </section>
 <!-- /.content -->
+<style>
+ .form-group.note-form-group.note-group-select-from-files {
+  display:none !important;
+ }
+</style>
