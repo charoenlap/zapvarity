@@ -5,7 +5,7 @@
 			<div class="col-lg-8">
 				<div class="single-main-news">
 					<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
-						<img src="<?php echo $val['cover']; ?>" alt="<?php echo $val['title']; ?>">
+						<img src="<?php echo $val['cover']; ?>" alt="<?php echo $val['result']['title']; ?>">
 					</a>
 					<div class="news-content">
 						<?php if(isset($val['tags'])){ ?>
@@ -28,7 +28,7 @@
 				<?php $val = $lasted[1]; ?>
 				<div class="single-main-news-inner">
 					<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
-						<img src="<?php echo $val['cover']; ?>" alt="<?php echo $val['title']; ?>">
+						<img src="<?php echo $val['cover']; ?>" alt="<?php echo $val['result']['title']; ?>">
 					</a>
 					<div class="news-content">
 						<?php foreach($val['tags'] as $tag){?>
@@ -49,7 +49,7 @@
 					<div class="single-main-news-box media align-items-center">
 						<div class="col-md-4 p-0">
 							<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
-								<img src="<?php echo $val['cover']; ?>" alt="<?php echo $val['title']; ?>">
+								<img src="<?php echo $val['cover']; ?>" alt="<?php echo $val['result']['title']; ?>">
 							</a>
 						</div>
 						<div class="col-md-8">
@@ -69,7 +69,7 @@
 					<div class="single-main-news-box media align-items-center">
 						<div class="col-md-4 p-0">
 							<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
-								<img src="<?php echo $val['cover']; ?>" alt="<?php echo $val['title']; ?>">
+								<img src="<?php echo $val['cover']; ?>" alt="<?php echo $val['result']['title']; ?>">
 							</a>
 						</div>
 						<div class="col-md-8">
