@@ -1,0 +1,84 @@
+hr {
+    background-color: orange;
+  }
+
+  .pagination {
+    padding: 20px;
+  }
+
+  .pagination>li>a {
+    color: orange;
+  }
+
+  .pagination>li>a:focus,
+  .pagination>li>a:hover,
+  .pagination>li>span:focus,
+  .pagination>li>span:hover {
+    color: #5a5a5a;
+    background-color: #eee;
+    border-color: #ddd;
+  }
+
+  .navbar-brand .img-logo {
+    width: 160px;
+    position: relative;
+    bottom: 40px;
+    margin: 0;
+  }
+  .is-sticky .img-logo {
+    width: 140px;
+    bottom: 0;
+  }
+  .mean-container .img-logo {
+    width: 140px;
+    top: 0;
+    padding: 0;
+  }
+  .mean-bar {
+    margin-top: 40px;
+  } 
+
+  @font-face {
+    font-family: "Kanit";
+    src: url("https://www.fsoftpro.com/projects/zapvarity/html/assets/fonts/Kanit/Kanit-Medium.ttf") !important;
+  }
+
+  .font-head li a {
+    font-family: "Kanit";
+  }
+
+  .footer-logo {
+      height: 150px;
+      margin: 10px;
+  }
+  .footer-link {
+      margin: 0;
+      padding: 0;
+  }
+  .footer-link>li {
+      display: inline;
+  }
+  .footer-link>li>a {
+      color: white;
+      margin: 5px;
+  }
+  .footer-area {
+      padding-top: 20px;
+      padding-bottom: 20px;
+  }
+  @media only screen and (max-width: 767px) {
+    .top-header-social {
+      margin-bottom: 0px;
+    }
+  }
+  .top-header-social {
+    background-color: whitesmoke;
+    padding: 0;
+  }
+  .top-header-social li a i {
+    background-color: black;
+    color: white;
+  }
+  .top-header-area {
+    background-color: whitesmoke;
+  }
