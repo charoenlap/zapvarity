@@ -89,41 +89,6 @@
 	</div>
 </section>
 <?php if(count($content_1)){ ?>
-<section class="main-hot-news">
-	<div class="page-title-area mb-5">
-		<div class="container">
-			<div class="page-title-content text-center">
-				<h2 class="font-weight-bold"><a href="<?php echo route('cat&id=1'); ?>" class="text-danger"><?php echo $content_topic_1; ?></a> </h2>
-			</div>
-		</div>
-	</div>
-	<div class="container">
-		<div class="row">
-			<?php foreach($content_1 as $val){ ?>
-			<div class="col-md-4">
-				<div class="single-most-popular-news">
-					<div class="popular-news-image">
-						<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
-							<img src="<?php echo photo($val['cover']);?>" alt="<?php echo $val['result']['title']; ?>">
-						</a>
-					</div>
-					<div class="popular-news-content">
-						<h3 class="font-weight-bold">
-							<a href="<?php echo route('detail&id='.$val['id']); ?>"><?php echo $val['result']['title']; ?></a>
-						</h3>
-						<h6>
-							<?php //echo html_entity_decode($val['result']['detail']); ?>
-							<?php echo mb_strimwidth(strip_tags(html_entity_decode($val['result']['detail'])), 0, 50, "..."); ?>
-						</h6>
-					</div>
-				</div>
-			</div>
-			<?php } ?>
-		</div>
-	</div>
-</section>
-<?php } ?>
-<?php if($content_2){ ?>
 <section class="default-news-area">
 	<div class="container">
 		<div class="row">
@@ -195,6 +160,41 @@
 	                <?php } ?>
 				</div>
 			</div>
+		</div>
+	</div>
+</section>
+<?php } ?>
+<?php if($content_2){ ?>
+<section class="main-hot-news">
+	<div class="page-title-area mb-5">
+		<div class="container">
+			<div class="page-title-content text-center">
+				<h2 class="font-weight-bold"><a href="<?php echo route('cat&id=1'); ?>" class="text-danger"><?php echo $content_topic_1; ?></a> </h2>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<?php foreach($content_1 as $val){ ?>
+			<div class="col-md-4">
+				<div class="single-most-popular-news">
+					<div class="popular-news-image">
+						<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
+							<img src="<?php echo photo($val['cover']);?>" alt="<?php echo $val['result']['title']; ?>">
+						</a>
+					</div>
+					<div class="popular-news-content">
+						<h3 class="font-weight-bold">
+							<a href="<?php echo route('detail&id='.$val['id']); ?>"><?php echo $val['result']['title']; ?></a>
+						</h3>
+						<h6>
+							<?php //echo html_entity_decode($val['result']['detail']); ?>
+							<?php echo mb_strimwidth(strip_tags(html_entity_decode($val['result']['detail'])), 0, 50, "..."); ?>
+						</h6>
+					</div>
+				</div>
+			</div>
+			<?php } ?>
 		</div>
 	</div>
 </section>
