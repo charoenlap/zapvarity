@@ -21,6 +21,12 @@
     <link rel="stylesheet" href="html/assets/css/custom.css">
     <link rel="icon" type="html/assets/img/Logo_Zapp.png" href="html/assets/img/Logo_Zapp.png">
 
+    <meta property="og:url"                content="<?php echo (!empty($url)?$url:NAME_WEBSITE); ?>" />
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content="<?php echo (!empty($header_title)?$header_title:NAME_WEBSITE); ?>" />
+    <meta property="og:description"        content="<?php echo (!empty($description)?$description:NAME_WEBSITE); ?>" />
+    <meta property="og:image"              content="<?php echo (!empty($image)?$image:NAME_WEBSITE); ?>" />
+
     <title><?php echo (!empty($title)?$title:NAME_WEBSITE); ?></title>
 
 </head>

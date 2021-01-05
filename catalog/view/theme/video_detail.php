@@ -9,7 +9,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 mb-2 pl-1 pr-1">
-                <?php if(!empty($content['result']['link'])){ ?>
+                <?php if(!empty($content['reesult']['link'])){ ?>
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo $content['result']['link']; ?>" allowfullscreen></iframe>
                 </div>

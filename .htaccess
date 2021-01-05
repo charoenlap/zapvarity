@@ -1,7 +1,12 @@
-ErrorDocument 404 https://www.zappvariety.com/
+#ErrorDocument 404 https://www.zappvariety.com/
 RewriteEngine On 
-RewriteCond %{HTTP_HOST} ^zappvariety\.com [NC]
+#RewriteCond %{HTTP_HOST} ^zappvariety\.com [NC]
 RewriteCond %{SERVER_PORT} 80 
-RewriteRule ^(.*)$ https://www.zappvariety.com/$1 [R,L]
+#RewriteRule ^(.*)$ https://www.zappvariety.com/$1 [R,L]
 
-Allow from All
+
+RewriteRule ^fooa/(.*)$ /index.php?route=contact [QSA]
+
+
+RewriteRule ^หมวดหมู่/(.*)/$ /cat.php?route=cat&id=$1 [L,QSA]
+RewriteRule ^ติดต่อ(.*)$ /index.php?route=contact [L,QSA]

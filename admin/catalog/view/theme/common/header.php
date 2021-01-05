@@ -238,12 +238,12 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="<?php echo route('home'); ?>" class="nav-link">
               <i class="nav-icon fas fa-ellipsis-h"></i>
               <p>หน้าหลัก</p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-header">เนื้อหา</li>
           <li class="nav-item">
             <a href="<?php echo route('content'); ?>" class="nav-link">
@@ -264,19 +264,19 @@
               <p>ติดต่อ</p>
             </a>
           </li>
-          <li class="nav-header">ตั้งค่า</li>
+          <!-- <li class="nav-header">ตั้งค่า</li>
           <li class="nav-item">
             <a href="<?php echo route('user'); ?>" class="nav-link">
               <i class="nav-icon fas fa-ellipsis-h"></i>
               <p>ผู้ใช้งาน</p>
             </a>
-          </li>
-          <li class="nav-item">
+          </li> -->
+         <!--  <li class="nav-item">
             <a href="<?php echo route('setting'); ?>" class="nav-link">
               <i class="nav-icon fas fa-ellipsis-h"></i>
               <p>เว็บไซต์</p>
             </a>
-          </li>
+          </li> -->
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <?php /* ?>

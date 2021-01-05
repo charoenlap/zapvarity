@@ -22,5 +22,16 @@
 	    public function delete(){
 	    	
 	    }
+	    public function checkUser(){
+	    	$result = false;
+	    	$user_id = $this->getSession('user_id');
+	    	$user_name = $this->getSession('user_name');
+	    	if(!empty($user_id) AND !empty($user_name)){
+	    		$result = true;
+	    	}
+	    	if(!$result){
+	    		$this->redirect('home');
+	    	}
+	    }
 	}
 ?>

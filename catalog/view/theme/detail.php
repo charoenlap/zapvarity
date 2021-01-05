@@ -30,23 +30,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-1 article-footer">
-                <div class="article-share">
-                    <!-- <ul class="social">
-                        <h6 class="text-center font-weight-bold">แชร์</h6>
-                        <li>
-                            <a href="#" target="_blank">
-                                <i class='bx bxl-facebook'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">
-                                <i class='bx bxl-twitter'></i>
-                            </a>
-                        </li>
-                    </ul> -->
-                </div>
-            </div>
+            
             <!-- <div class="col-md-1 top-header-social">
                 <h6 class="badge badge-pill badge-primary" style="font-size: 16px; margin-top: 20px;">แชร์</h6>
                 <li style="margin: 5px;">
@@ -61,7 +45,7 @@
                     </a>
                 </li>
             </div> -->
-            <div class="col-md-8 text-justify " style="margin-top: 20px;">
+            <div class="col-md-9 text-justify " style="margin-top: 20px;">
                 <h5 class="text-danger text-center font-weight-bold"><?php echo $content['result']['title']; ?></h5>
                 <div class="content-detail">
                     <?php echo html_entity_decode($content['result']['detail']); ?>
@@ -91,5 +75,18 @@
                 <?php } ?>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12 article-footer">
+                <div class="article-share">
+                    <ul class="social">
+                        <li>
+                             <div class="fb-share-button" data-href="<?php echo MURL.'index.php?route=video/video_detail&id='.get('id'); ?>" data-layout="button_count" data-size="small"><a target="_blank" href="<?php echo MURL.'index.php?route=detail&id='.get('id'); ?>" class="fb-xfbml-parse-ignore">Share</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v9.0&appId=1140190572668464&autoLogAppEvents=1" nonce="HruokkHY"></script>

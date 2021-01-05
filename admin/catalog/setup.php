@@ -3,6 +3,10 @@
 	define('BASE_CATALOG', BASE.'catalog/');
 	define('THEME','theme');
 	define('BASE_ASSET', MURL.'admin/assets/');
+	// 
+	
+	// $controller = new controller;
+	// echo $controller->getSession('user_id').'<<';exit();
 	// use PHPMailer\PHPMailer\PHPMailer;
 	// use PHPMailer\PHPMailer\Exception;
 

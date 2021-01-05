@@ -1,6 +1,8 @@
 <?php 
 	class CommonController extends Controller {
 	    public function header($data=array()) {
+	    	$check = new Controller();
+	    	$check->class('user')->checkUser();
 	    	$this->render('common/header',$data);
 	    }
 	    public function footer($data=array()){

@@ -3,6 +3,7 @@
         <h3 class="font-weight-bold text-danger text-center p-5">
             ติดต่อเรา
         </h3>
+        <p class="text-center">E-mail: <a href="mailto:zappvariety.news@gmail.com">zappvariety.news@gmail.com</a></p>
         <div class="contact-form">
             <div class="title">
                 <h3>กรุณาระบุข้อมูล</h3>

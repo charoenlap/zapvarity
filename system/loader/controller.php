@@ -1,5 +1,15 @@
 <?php
 class Controller{
+    public function class($class=''){
+        if(!empty($class)){
+            $absolute_path = '';
+            $absolute_path = BASE_CATALOG.'controller/'.$class.'.php';
+            include($absolute_path);
+            $string_class = ucfirst(strtolower($class))."Controller";
+            $class = new $string_class();
+            return $class;
+        }
+    }
     public function view($path='',$data=array()){
         $absolute_path = '';
         $absolute_path = BASE_CATALOG.'view/'.THEME.'/'.$path.'.php';
@@ -81,5 +91,37 @@ class Controller{
     }
     public function setTitle(){
         
+    }
+    public function destroySession(){
+        session_destroy();
+    }
+    public function setSession($key='',$val=''){
+        if(!empty($key)){
+            $_SESSION[$key] = $val;
+        }
+    }
+    public function hasSession($key='') {
+        if (isset($_SESSION[$key])) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public function getSession($key=''){
+        $result = '';
+        if(isset($_SESSION[$key])){
+            $result = $_SESSION[$key];
+        }else{
+            // error('Not fonud session key : '.$key);
+        }
+        return $result;
+    }
+    public function rmSession($key=''){
+        $result = '';
+        if(isset($_SESSION[$key])){
+            $_SESSION[$key] = '';
+            unset($_SESSION[$key]);
+        }
+        return $result;
     }
 }
