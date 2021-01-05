@@ -96,11 +96,11 @@
 				<div class="most-popular-news">
 					<div class="section-title pt-4">
 						<a href="<?php echo route('cat'); ?>" class="text-decoration-none">
-							<h2 class="font-weight-bold text-danger"><?php echo $content_topic_2; ?></h2>
+							<h2 class="font-weight-bold text-danger"><?php echo $content_topic_1; ?></h2>
 						</a>
 					</div>
 					<div class="row">
-					<?php foreach($content_2 as $val){ ?>
+					<?php foreach($content_1 as $val){ ?>
 						<div class="col-4">
 							<a href="<?php echo route('detail'); ?>" class="text-decoration-none">
 						<div class="most-popular-post border-0">
@@ -169,13 +169,13 @@
 	<div class="page-title-area mb-5">
 		<div class="container">
 			<div class="page-title-content text-center">
-				<h2 class="font-weight-bold"><a href="<?php echo route('cat&id=1'); ?>" class="text-danger"><?php echo $content_topic_1; ?></a> </h2>
+				<h2 class="font-weight-bold"><a href="<?php echo route('cat&id=1'); ?>" class="text-danger"><?php echo $content_topic_2; ?></a> </h2>
 			</div>
 		</div>
 	</div>
 	<div class="container">
 		<div class="row">
-			<?php foreach($content_1 as $val){ ?>
+			<?php foreach($content_2 as $val){ ?>
 			<div class="col-md-4">
 				<div class="single-most-popular-news">
 					<div class="popular-news-image">
