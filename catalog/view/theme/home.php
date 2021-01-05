@@ -134,30 +134,34 @@
 							<h2 class="font-weight-bold text-danger"><?php echo $content_topic_2; ?></h2>
 						</a>
 					</div>
+					<div class="row">
 					<?php foreach($content_2 as $val){ ?>
-					<a href="<?php echo route('detail'); ?>" class="text-decoration-none">
+						<div class="col-4">
+							<a href="<?php echo route('detail'); ?>" class="text-decoration-none">
 						<div class="most-popular-post border-0">
 							<div class="single-news-item">
-								<div class="row align-items-center">
-									<div class="col-lg-5">
+								<div class="row">
+									<div class="col-12">
 										<div class="news-image">
 											<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
 												<img src="<?php echo photo($val['cover']);?>" alt="image">
 											</a>
 										</div>
 									</div>
-									<div class="col-lg-7">
+								</div>
+								<div class="row">
+									<div class="col-12">
 										<div class="news-content">
 											<?php foreach($val['tags'] as $tag){?>
 												<span class="badge badge-danger text-wrap text-light">
 													<?php echo $tag['title']; ?>
 												</span>
 											<?php } ?>
-											<h3>
+											<h4>
 												<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
 													<?php echo $val['result']['title']; ?>
 												</a>
-											</h3>
+											</h4>
 											<p><?php echo mb_strimwidth(strip_tags(html_entity_decode($val['result']['detail'])), 0, 50, "..."); ?></p>
 											<p><?php echo $val['result']['date_create'];?></p>
 										</div>
@@ -166,8 +170,9 @@
 							</div>
 						</div>
 					</a>
-					<hr>
+						</div>	
 					<?php } ?>
+					</div>
 				</div>
 			</div>
 
@@ -188,6 +193,62 @@
 	                </a>
 	                <hr>
 	                <?php } ?>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<?php } ?>
+<?php if($content_3){ ?>
+<section class="default-news-area">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="most-popular-news">
+					<div class="section-title pt-4">
+						<a href="<?php echo route('cat'); ?>" class="text-decoration-none">
+							<h2 class="font-weight-bold text-danger"><?php echo $content_topic_3; ?></h2>
+						</a>
+					</div>
+					<div class="row">
+					<?php foreach($content_3 as $val){ ?>
+						<div class="col-3">
+							<a href="<?php echo route('detail'); ?>" class="text-decoration-none">
+						<div class="most-popular-post border-0">
+							<div class="single-news-item">
+								<div class="row">
+									<div class="col-12">
+										<div class="news-image">
+											<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
+												<img src="<?php echo photo($val['cover']);?>" alt="image">
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<div class="news-content">
+											<?php foreach($val['tags'] as $tag){?>
+												<span class="badge badge-danger text-wrap text-light">
+													<?php echo $tag['title']; ?>
+												</span>
+											<?php } ?>
+											<h4>
+												<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
+													<?php echo $val['result']['title']; ?>
+												</a>
+											</h4>
+											<p><?php echo mb_strimwidth(strip_tags(html_entity_decode($val['result']['detail'])), 0, 50, "..."); ?></p>
+											<p><?php echo $val['result']['date_create'];?></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+						</div>	
+					<?php } ?>
+					</div>
 				</div>
 			</div>
 		</div>

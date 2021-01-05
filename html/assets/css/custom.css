@@ -111,3 +111,15 @@ hr {
   .collapse.navbar-collapse.mean-menu.overflow-auto{
     border-top:solid 1px #ff661f;
   }
+.single-news-item .news-image{
+  max-height:200px;
+  overflow-y:hidden;
+}
+.single-news-item .news-content h4{
+  max-height: 55px;
+  overflow-y: hidden;
+}
+.single-most-popular-news .popular-news-image {
+    overflow: hidden;
+    max-height: 200px;
+}
