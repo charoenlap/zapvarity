@@ -123,3 +123,6 @@ hr {
     overflow: hidden;
     max-height: 200px;
 }
+.single-main-news-inner{
+  max-height:300px;
+}
