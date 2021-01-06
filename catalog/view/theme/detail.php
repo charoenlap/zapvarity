@@ -1,3 +1,4 @@
+<img src="img.php?file=2,<?php echo $content['cover']; ?>,700,700" alt="" style="display:none;">
 <section class="main-hot-news">
     <div style="background-color: black; padding-top:50px;">
         <div class="container">
@@ -56,6 +57,7 @@
                     <a class="badge badge-secondary text-light" href="<?php echo route('cat'); ?>">#อีรัน</a>
                     <a class="badge badge-secondary text-light" href="<?php echo route('cat'); ?>">#สถานเอกอัครราชทูตไทย</a>
                 </div> -->
+                <hr>
                 <div class="row">
                     <div class="col-md-12">
                         <h2>รูปภาพเพิ่มเติม</h2>
