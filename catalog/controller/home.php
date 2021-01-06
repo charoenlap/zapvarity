@@ -5,17 +5,14 @@
 			$data['title'] = "zappvariety - Home";
 			$data['lasted'] = $this->model('master')->getLated();
 
-			$id=1;
-			$data['content_1'] = $this->model('master')->getCat($id);
-			$data['content_topic_1'] = $this->model('master')->getTitle($id)['title'];
-
-			$id=2;
-			$data['content_2'] = $this->model('master')->getCat($id);
-			$data['content_topic_2'] = $this->model('master')->getTitle($id)['title'];
-
-			$id=3;
-			$data['content_3'] = $this->model('master')->getCat($id);
-			$data['content_topic_3'] = $this->model('master')->getTitle($id)['title'];
+			$menu = $data['menu'] = $this->model('master')->getMenu();
+			$data['menu'] = $menu;
+			foreach($menu AS $val){
+				$id=$val['id'];
+				$data['content_'.$id] = $this->model('master')->getCat($id);
+				$data['content_topic_'.$id] = $this->model('master')->getTitle($id)['title'];
+			}
+			
 
 			$data['related'] = $this->model('master')->getCat(11);
 			// $data['related'] = $this->model('master')->getRelated($id);
