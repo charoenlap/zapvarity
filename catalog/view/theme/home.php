@@ -5,7 +5,7 @@
 			<div class="col-lg-8">
 				<div class="single-main-news">
 					<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
-						<img src="<?php echo photo($val['cover']); ?>" alt="<?php echo $val['result']['title']; ?>">
+						<img src="img.php?file=2,<?php echo photo($val['cover']); ?>,1000,610" alt="<?php echo $val['result']['title']; ?>">
 					</a>
 					<div class="news-content">
 						<?php if(isset($val['tags'])){ ?>
@@ -28,7 +28,7 @@
 				<?php $val = $lasted[1]; ?>
 				<div class="single-main-news-inner">
 					<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
-						<img src="<?php echo photo($val['cover']); ?>" alt="<?php echo $val['result']['title']; ?>">
+						<img src="img.php?file=2,<?php echo photo($val['cover']); ?>,400,250" alt="<?php echo $val['result']['title']; ?>">
 					</a>
 					<div class="news-content">
 						<?php foreach($val['tags'] as $tag){?>
@@ -49,7 +49,7 @@
 					<div class="single-main-news-box media align-items-center">
 						<div class="col-md-4 p-0">
 							<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
-								<img src="<?php echo photo($val['cover']); ?>" alt="<?php echo $val['result']['title']; ?>">
+								<img src="img.php?file=2,<?php echo photo($val['cover']); ?>,130,90" alt="<?php echo $val['result']['title']; ?>">
 							</a>
 						</div>
 						<div class="col-md-8">
@@ -69,7 +69,7 @@
 					<div class="single-main-news-box media align-items-center">
 						<div class="col-md-4 p-0">
 							<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
-								<img src="<?php echo photo($val['cover']); ?>" alt="<?php echo $val['result']['title']; ?>">
+								<img src="img.php?file=2,<?php echo photo($val['cover']); ?>,130,90" alt="<?php echo $val['result']['title']; ?>">
 							</a>
 						</div>
 						<div class="col-md-8">
@@ -109,7 +109,7 @@
 									<div class="col-12">
 										<div class="news-image">
 											<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
-												<img src="<?php echo photo($val['cover']);?>" alt="image">
+												<img src="img.php?file=2,<?php echo photo($val['cover']); ?>,400,290" alt="image">
 											</a>
 										</div>
 									</div>
@@ -149,7 +149,7 @@
 	                <a href="<?php echo route('detail&id='.$val['result']['id']); ?>" class="text-decoration-none">
 	                    <div class="single-most-popular-news">
 	                        <div class="popular-news-image">
-	                            <img src="<?php echo photo($val['cover']); ?>" alt="<?php echo $val['result']['title']; ?>">
+	                            <img src="img.php?file=2,<?php echo photo($val['cover']); ?>,400,290" alt="<?php echo $val['result']['title']; ?>">
 	                        </div>
 	                        <div class="popular-news-content">
 	                            <span class="font-weight-bold"><?php echo $val['result']['title']; ?></span>
@@ -180,7 +180,7 @@
 				<div class="single-most-popular-news">
 					<div class="popular-news-image">
 						<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
-							<img src="<?php echo photo($val['cover']);?>" alt="<?php echo $val['result']['title']; ?>">
+							<img src="img.php?file=2,<?php echo photo($val['cover']); ?>,400,290" alt="<?php echo $val['result']['title']; ?>">
 						</a>
 					</div>
 					<div class="popular-news-content">
@@ -220,7 +220,7 @@
 									<div class="col-12">
 										<div class="news-image">
 											<a href="<?php echo route('detail&id='.$val['result']['id']); ?>">
-												<img src="<?php echo photo($val['cover']);?>" alt="image">
+												<img src="img.php?file=2,<?php echo photo($val['cover']); ?>,400,290" alt="image">
 											</a>
 										</div>
 									</div>
