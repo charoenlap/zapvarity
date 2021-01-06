@@ -56,11 +56,11 @@
     <div class="container-fluid">
         <div class="row">
             <?php foreach ($related as $key => $value) { ?>
-            <div class="col-sm-4 mb-2 pl-1 pr-1">
+            <div class="col-sm-3 mb-2 pl-1 pr-1">
                 <a href="<?php echo route('video/video_detail') ?>">
                     <div class="video-item">
                         <div class="video-news-image">
-                            <img src="<?php echo photo($value['cover']); ?>" alt="image">
+                            <img src="img.php?file=2,<?php echo $value['cover']; ?>,400,300" alt="image">
                             <i class='bx bx-play-circle'></i>
                         </div>
                         <div class="video-news-content">

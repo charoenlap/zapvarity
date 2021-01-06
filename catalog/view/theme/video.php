@@ -23,7 +23,7 @@
                         <a href="<?php echo route('video/video_detail&id='.$val['id']); ?>">
                             <div class="video-item">
                                 <div class="video-news-image">
-                                    <img src="<?php echo photo($val['cover']);?>" alt="image">
+                                    <img src="img.php?file=2,<?php echo $val['cover']; ?>,455,200" alt="image">
                                     <i class='bx bx-play-circle'></i>
                                 </div>
                                 <div class="video-news-content">

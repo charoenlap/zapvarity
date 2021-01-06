@@ -18,7 +18,7 @@
 									<div class="col-lg-6">
 										<div class="news-image">
 											<a href="<?php echo route('detail&id='.$val['id']); ?>">
-												<img src="<?php echo photo($val['cover']);?>" alt="image">
+												<img src="img.php?file=2,<?php echo $val['cover']; ?>,450,200" alt="image">
 											</a>
 										</div>
 									</div>
@@ -70,7 +70,7 @@
 				<a href="<?php echo route('video/video_detail&id='.$val['id']); ?>" class="text-decoration-none">
 					<div class="single-most-popular-news">
 						<div class="popular-news-image">
-							<img src="<?php echo photo($val['cover']);?>" alt="image">
+							<img src="img.php?file=2,<?php echo $val['cover']; ?>,290,130" alt="image">
 						</div>
 						<div class="popular-news-content">
 							<span class="font-weight-bold">
