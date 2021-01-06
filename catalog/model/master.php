@@ -59,7 +59,7 @@
 		}
 		public function getLated($data=array()){
 			$result = array();
-			$content = $this->query("SELECT *,ct.id AS id FROM ".PREFIX."content_tags ct 
+			$content = $this->query("SELECT *,c.id AS id FROM ".PREFIX."content_tags ct 
 				LEFT JOIN ".PREFIX."content c ON ct.content_id = c.id 
 				LEFT JOIN ".PREFIX."content_detail cd ON c.id = cd.content_id 
 				WHERE 
