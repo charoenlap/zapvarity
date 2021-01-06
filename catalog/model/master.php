@@ -167,5 +167,10 @@
 			$result = $this->insert('contact',$insert);
 			return $result;
 		}
+		public function contentImg($id){
+			$sql = "SELECT * FROM ".PREFIX."files WHERE content_id=".$id;
+			$result = $this->query($sql)->rows;
+			return $result;
+		}
 	}
 ?>

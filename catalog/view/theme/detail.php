@@ -56,6 +56,20 @@
                     <a class="badge badge-secondary text-light" href="<?php echo route('cat'); ?>">#อีรัน</a>
                     <a class="badge badge-secondary text-light" href="<?php echo route('cat'); ?>">#สถานเอกอัครราชทูตไทย</a>
                 </div> -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>รูปภาพเพิ่มเติม</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <?php foreach($img as $val){?>
+                        <div class="col-md-3 mb-3">
+                            <a href="<?php echo $val['path'];?>" target="_blank">
+                                <img src="img.php?file=2,<?php echo $val['path'];?>,300,300" alt="image">
+                            </a>
+                        </div>
+                    <?php } ?>
+                </div>
             </div>
             <div class="col-md-3">
                 <div class="section-title" style="margin-top: 20px;">
@@ -77,6 +91,7 @@
                 <?php } ?>
             </div>
         </div>
+        
         <div class="row">
             <div class="col-md-12 article-footer">
                 <div class="article-share">
