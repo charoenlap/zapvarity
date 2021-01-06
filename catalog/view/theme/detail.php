@@ -14,8 +14,10 @@
             </div>
         </div>
     </div>
+    <?php //echo $content['cover']; ?>
     <div class="container-fluid-img-overlay wrapper">
-        <img src="<?php echo photo($content['cover']);?>" alt="<?php echo $content['result']['title']; ?>" class="img-cover-detail-size img-reponsive img-reponsive-center ">
+        <img src="img.php?file=2,<?php echo $content['cover']; ?>,1200,300" alt="<?php echo $content['result']['title']; ?>" 
+        class="img-cover-detail-size img-reponsive img-reponsive-center ">
     </div>
     <div class="container-fluid">
         <div class="row">
